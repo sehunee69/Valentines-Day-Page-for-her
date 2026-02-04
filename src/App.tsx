@@ -58,7 +58,7 @@ const ValentinesPage: React.FC = () => {
         <div className="flex flex-col items-center justify-center w-full max-w-2xl pt-32">
           <div 
             className={`relative w-full max-w-lg h-72 bg-pink-300 rounded-b-2xl shadow-2xl cursor-pointer transition-transform duration-1000 ease-in-out ${
-              isOpen ? 'translate-y-80' : '' 
+              isOpen ? 'translate-y-100' : '' 
             }`}
             onClick={!isOpen ? handleOpenEnvelope : undefined}
             style={{ perspective: '1200px' }}
@@ -88,16 +88,16 @@ const ValentinesPage: React.FC = () => {
                 >✕</button>
               )}
               
-              <h2 className="text-pink-600 font-serif italic text-2xl mb-4 text-left border-b border-pink-100 pb-2">My Dearest,</h2>
+              <h2 className="text-pink-600 font-serif italic text-2xl mb-4 text-left border-b border-pink-100 pb-2">To my loml,</h2>
               
               <div className="text-gray-700 text-base leading-relaxed text-left font-sans space-y-4">
-                <p>My Dearest, every single moment we spend together feels like a beautiful dream that I 
-                  never want to wake up from. You make my world infinitely brighter just by being in it, 
-                  and I find myself smiling at the randomest times just thinking about your laugh. 
-                  I’ve realized that my favorite place in the whole world isn’t a location, 
-                  but simply wherever you are. Your kindness, your strength, and the way you see 
-                  the beauty in everything inspire me to be a better man every day.</p>
-                
+                <p>Hello lovee,
+                  Every second we share is like a page from a story I never want to finish. You’ve brought a light into my life that I 
+                  didn't know I was missing, and just the thought of your smile is enough to pull me through my toughest days. Even when 
+                  we argue or face rough times, I know we’ll always be together, supporting each other through every high and low. 
+                  I’ll be there for you when you’re sad, tired, or stumble along the way, and I’ll celebrate every small victory with 
+                  you too. As we navigate college and chase our dreams, I want us to grow together, lifting each other up, 
+                  focusing on our studies, and becoming the best versions of ourselves always, so I wanted to ask you...</p>
                 <div className="pt-6 text-right">
                   <p className="text-gray-500 text-xs italic mb-1">Yours truly,</p>
                   <p className="text-pink-600 text-3xl font-['Dancing_Script'] font-bold">Akii</p>
@@ -128,7 +128,6 @@ const ValentinesPage: React.FC = () => {
               <div className={`fixed left-0 top-0 h-full w-1/2 pointer-events-none z-10 transition-opacity duration-1000 ${
                 horrorSequence >= 2 ? 'opacity-100' : 'opacity-0'
               }`}>
-                {/* Change position of the eye */}
                 <TrackingEye top="41.0%" left="37.8%" mousePos={mousePos} />
                 <TrackingEye top="40.5%" left="54.2%" mousePos={mousePos} />
               </div>
@@ -150,11 +149,11 @@ const ValentinesPage: React.FC = () => {
 
           <div className="flex flex-wrap items-center justify-center gap-4 w-full px-4">
             <button 
-              className={`font-bold py-2 px-6 rounded-lg transition-all shadow-xl active:scale-90 ${
-                isHorrorMode 
-                  ? 'fixed z-50 bg-red-950 text-red-500 border border-red-900 pointer-events-auto cursor-pointer' 
-                  : 'bg-green-500 text-white relative'
-              } ${isHorrorMode && horrorSequence < 1 ? 'opacity-0' : 'opacity-100'}`}
+              className={`font-bold py-2 px-6 rounded-lg transition-all shadow-xl active:scale-90 
+                ${isHorrorMode 
+                  ? 'fixed z-50 bg-red-950 text-red-500 border border-red-900 cursor-pointer hover:bg-red-900 hover:brightness-125 hover:shadow-[0_0_20px_rgba(255,0,0,0.5)]' 
+                  : 'bg-green-500 text-white relative hover:bg-green-400 hover:scale-110 hover:shadow-green-300/50'
+                } ${isHorrorMode && horrorSequence < 1 ? 'opacity-0' : 'opacity-100'}`}
               style={isHorrorMode ? {
                 left: `${mousePos.x}px`,
                 top: `${mousePos.y}px`,
@@ -172,7 +171,7 @@ const ValentinesPage: React.FC = () => {
 
             {!isHorrorMode && (
               <button 
-                className="bg-red-500 text-white font-bold py-2 px-6 rounded-lg shadow-lg active:scale-95 transition-all" 
+                className="bg-red-500 text-white font-bold py-2 px-6 rounded-lg shadow-lg active:scale-95 transition-all hover:bg-red-600 hover:scale-105 hover:shadow-xl" 
                 onClick={handleNoClick}
               >
                 {phrases[noCount]}

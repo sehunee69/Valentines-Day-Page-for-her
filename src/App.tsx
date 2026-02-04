@@ -118,7 +118,7 @@ const ValentinesPage: React.FC = () => {
           {isHorrorMode && (
             <>
               <img 
-                  src="/babadook.jpg" 
+                  src="babadook.jpg" 
                   className={`fixed left-0 top-0 h-full w-1/2 object-contain pointer-events-none z-0 mix-blend-screen transition-opacity duration-[5000ms] ease-in-out ${
                       horrorSequence >= 2 ? 'opacity-30' : 'opacity-0'
                   }`}

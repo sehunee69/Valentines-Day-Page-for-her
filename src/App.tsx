@@ -149,7 +149,7 @@ const ValentinesPage: React.FC = () => {
 
           <div className="flex flex-wrap items-center justify-center gap-4 w-full px-4">
             <button 
-              className={`font-bold py-2 px-6 rounded-lg transition-all shadow-xl active:scale-90 
+              className={`font-bold py-2 px-6 rounded-lg transition-all shadow-xl active:scale-90 cursor-pointer
                 ${isHorrorMode 
                   ? 'fixed z-50 bg-red-950 text-red-500 border border-red-900 cursor-pointer hover:bg-red-900 hover:brightness-125 hover:shadow-[0_0_20px_rgba(255,0,0,0.5)]' 
                   : 'bg-green-500 text-white relative hover:bg-green-400 hover:scale-110 hover:shadow-green-300/50'
@@ -171,7 +171,7 @@ const ValentinesPage: React.FC = () => {
 
             {!isHorrorMode && (
               <button 
-                className="bg-red-500 text-white font-bold py-2 px-6 rounded-lg shadow-lg active:scale-95 transition-all hover:bg-red-600 hover:scale-105 hover:shadow-xl" 
+                className="bg-red-500 text-white font-bold py-2 px-6 rounded-lg shadow-lg active:scale-95 transition-all cursor-pointer hover:bg-red-600 hover:scale-105 hover:shadow-xl" 
                 onClick={handleNoClick}
               >
                 {phrases[noCount]}
